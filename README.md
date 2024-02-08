@@ -9,46 +9,55 @@ ______ is a web platform for local businessses to conect with their customers an
 
 
     ### User Management
+    
+    - Customers and business owners can register and create an account, based on two categories;
+        Business owners account, or customer account.
+    
+    - Customers and business owners can log in and log out of their accounts.
+    
+    - Customers and business owners can reset their passwords if forgotten.
 
-    - Users can register and create an account.
 
-    - Users can log in and log out of their accounts.
+    ### Product and Service Management
+    - Business owners can upload logos, photos, and/or videos to showcase their offerings.
 
-    - Users can reset their passwords if forgotten.
+    - Business owners can manage menus, service listings, or appointment slots.
 
-    ### Product Management
+    - They can set pricing and availability for their offerings.
 
-    - Users can browse products by category.
+    - Customers can browse products by category.
+    
+    - Customers can search for products by name or description.
 
-    - Users can search for products by name or description.
+    - Customers can view detailed information about each product.
 
-    - Users can view detailed information about each product.
-
-    - Users can add products to their shopping cart.
-
-    - Users can remove products from their shopping cart.
-
-    - Users can view their shopping cart and proceed to checkout.
-
-    - Users can view their order history.
+    - They can add products to their shopping cart.
+    
+    - They can remove products from their shopping cart.
+    
+    - They can view their shopping cart and proceed to checkout.
+    
+    - They can view their order history.
 
     ### Order Management
 
-    - Users can place orders for products.
-
-    - Users can view the status of their orders.
-
-    - Users receive email notifications for order updates.
+    - Customers can place orders for products.
+    
+    - Customers can view the status of their orders.
+    
+    - Customers receive email notifications for order updates.
 
     ### Admin Panel
 
     - Admins can add, edit, and delete products.
 
-    - Admins can view and manage user accounts.
+    - Admins can view and manage user accounts(both businesses and customers).
 
     - Admins can view and manage orders.
+    
+    - Admins can manage platform settings and configurations.
 
-    - Admins can generate sales reports.
+    - Admins can generate sales reports and analytics.
 
 ## Technological Specifications
 
@@ -64,7 +73,7 @@ ______ is a web platform for local businessses to conect with their customers an
 
     - MySQL database for data storage.
 
-    - Django REST Framework for API development (optional for future mobile app integration).
+    <!-- - Django REST Framework for API development (optional for future mobile app integration).r  -->
 
     ### Authentication and Authorization
     - Django’s built-in authentication system for user authentication.
@@ -74,13 +83,11 @@ ______ is a web platform for local businessses to conect with their customers an
     - Role-based access control for admin functionality.
 
     ### Deployment
-    - Linode(Linux server) for cloud hosting.
+    - Linode(Linux server) or Microsoft Azure Cloud for cloud hosting.
 
-    - SSL/TLS certificate for secure HTTPS connections.
+    <!-- - SSL/TLS certificate for secure HTTPS connections. -->
 
     ### Testing
     - Unit tests for backend logic using Django’s testing framework.
 
     - Integration tests for frontend and backend interactions.
-
-
