@@ -1,13 +1,13 @@
 from django.shortcuts import render,redirect,reverse
 from BusinessApp import forms,models
-from CustomerApp import models
+#from CustomerApp import models
 from django.http import HttpResponseRedirect,HttpResponse
 from django.core.mail import send_mail
 from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.contrib import messages
 from django.conf import settings
-from CustomerApp.views import is_customer
+#from CustomerApp.views import is_customer
 
 #for showing login button for business(by sumit)
 def businessclick_view(request):
