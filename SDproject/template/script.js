@@ -36,3 +36,14 @@ for (const item of scrollContainer) {
         item.scrollLeft += evt.deltaY;
     })
 }
+
+var extraitems = document.getElementById("extraitems")
+
+extraitems.addEventListener("click", function (){
+    var submenu = document.getElementById("submenu")
+    submenu.classList.remove("hidden")
+    
+    setTimeout(function () {
+        submenu.classList.add("hidden")
+    }, 5000)
+})
