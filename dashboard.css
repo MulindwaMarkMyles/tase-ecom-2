@@ -9,3 +9,39 @@
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
 }
+body{
+    display: flex;
+}
+.sidebar{
+    position:sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 240px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.55s linear;
+    background:rgb(255, 192, 203);
+}
+.logo{
+    height: 80px;
+    padding: 16px;
+}
+.menu{
+    height: 86%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover,
+.active{
+    background: rgba(255, 0, 0, 0.795);
+}
