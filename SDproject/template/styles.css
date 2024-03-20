@@ -128,11 +128,12 @@ nav{
 }
 .hidden {
     opacity: 0;
+    transform:translateX(-1000px);
 }
 .nav-buttom ul li .sub-menu1{
     display: block;
     position: absolute;
-    background: #fbfafadf;
+    background: #373636df;
     margin-top: 15px;
     margin-left: -15px;
 }
@@ -165,6 +166,10 @@ nav{
     row-gap: 20px;
     justify-content: space-between;
     margin: 50px 80px;
+    transition: all 0.2s linear;
+}
+.box-row div:hover {
+    transform: scale(1.05);
 }
 .box-col{
     display: flex;
@@ -196,6 +201,10 @@ nav{
     gap: 20px;
     margin-top: 10px;
     align-items: baseline;
+    transition: all 0.2s linear;
+}
+.product-slider .products div:hover {
+    transform: scale(1.15);
 }
 .product-slider .products div {
     border: 1px solid grey;
@@ -286,9 +295,10 @@ footer{
     bottom: 0;
     display: flex;
     align-items: center;
+    flex-direction: column;
     color: #fff;
     background: linear-gradient(to right,#e00d0d, #390f01);
-    padding: 100px 0 30px;
+    padding: 20px 0 30px;
     font-size: 13px;
     line-height: 20px;
 }
@@ -466,4 +476,16 @@ td:last-child{
 }
 th:last-child{
     text-align: right;
+}
+.btn-checkout {
+    display: flex;
+    justify-content: right;
+}
+.btn-checkout button {
+    padding: 5px 15px;
+    cursor: pointer;
+    background: #b0adadb1;
+    border:none;
+    border-radius: 5px;
+
 }
