@@ -5,4 +5,12 @@ body {
     background-image: url(checkout3.png);
     background-size: cover;
 
+    }
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
