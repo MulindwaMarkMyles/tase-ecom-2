@@ -28,4 +28,17 @@ checkoutForm.addEventListener('submit', function(event) {
     // Fetch form values
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
+    var paymentMethod = document.getElementById('payment-method').value;
     
+    // You can perform further actions here, like sending data to a server
+    
+    // For demonstration, let's just log the data
+    console.log("Name: " + name);
+    console.log("Email: " + email);
+    console.log("Address: " + address);
+    console.log("Payment Method: " + paymentMethod);
+
+    // Redirect to order status page
+    window.location.href = 'order_status.html';
+});
