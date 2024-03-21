@@ -85,61 +85,104 @@ nav{
     align-items: center;
     margin: 0px 15px;
 }
-.nav-buttom{
-    background: rgb(228, 24, 24);
-    text-align: center;
-    display: flex;
-    gap: 20px;
-    padding: 5px 15px;
-    color: #000000;
-    font-size: 15px;
-}
-.nav-buttom ul{
-    display: flex;
-    list-style: none;
-    color: #000000;
-    font-weight: 600;
-    gap: 5px;
-    align-items: center;
-    
-}
-.nav-buttom ul li{
-    width: 120;
-    margin: 2px;
-    padding: 10px;
+.sidebar{
+    position: absolute;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #e7e3e3;
     z-index: 10;
-}
-.nav-buttom ul li a {
-    display: flex;
-    align-items:center;
-    gap:10px;
-}
-.active, .nav-buttom ul li:hover{
-    background: #ed8c8c;
+    transition: all .5s ease;
     border-radius: 3px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+    overflow: auto;
+}
+.sidebar ul li:nth-child(13),
+.sidebar ul .special{
+    background: #000;
+    -webkit-text-fill-color: #fff;
+    pointer-events: none;
+}
+.sidebar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+.sidebar:hover:-webkit-scrollbar{
+    width: 10px;
+}
+.sidebar header{
+    font-size: 22px;
+    color: rgb(249, 243, 243);
+    text-align: center;
+    line-height: 40px;
+    background: #0c0c0c;
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 35px;
+    font-size: 15px;
+    color: rgb(11, 10, 10);
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: .4s;
+    box-shadow: 0px 5px 15px rgba(65, 65, 65, 0.15);
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 16px;
+}
+#check{
+    display: none;   
+}
+label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #0a0404;
+    z-index:1000;
+}
+label #btn{
+    left: 0px;
+    top: 83px;
+    font-size: 25px;
+    color: rgb(244, 240, 240);
+    padding: 6px 12px;
+    transition: all .5s;
+}
+label #cancel{
+    z-index: 1000;
+    left: -195px;
+    top: 90px;
+    font-size: 20px;
+    color: #0a5275;
+    padding: 4px 9px;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
 }
 .header-slider ul{
     display: flex;
     overflow-y: hidden;
 }
-.sub-menu1{
-    display: none;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.25);
-}
 .hidden {
     opacity: 0;
     transform:translateX(-1000px);
-}
-.nav-buttom ul li .sub-menu1{
-    display: block;
-    position: absolute;
-    background: #373636df;
-    margin-top: 15px;
-    margin-left: -15px;
-}
-.nav-buttom ul li .sub-menu1 ul{
-    display: block;
-    margin: 10px;
 }
 .header-img{
     max-width: 100%;
@@ -169,6 +212,7 @@ nav{
     transition: all 0.2s linear;
 }
 .box-row div:hover {
+    transition: all 0.3s linear;
     transform: scale(1.05);
 }
 .box-col{
@@ -202,8 +246,10 @@ nav{
     margin-top: 10px;
     align-items: baseline;
     transition: all 0.2s linear;
+    padding: 30px 0;
 }
 .product-slider .products div:hover {
+    transition: all 0.3s linear;
     transform: scale(1.15);
 }
 .product-slider .products div {
