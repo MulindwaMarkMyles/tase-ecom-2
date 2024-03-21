@@ -25,4 +25,7 @@ var checkoutForm = document.getElementById('checkout-form');
 checkoutForm.addEventListener('submit', function(event) {
     event.preventDefault();
     
+    // Fetch form values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
     
