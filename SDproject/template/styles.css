@@ -147,7 +147,7 @@ label #btn,label #cancel{
     position: absolute;
     cursor: pointer;
     background: #0a0404;
-    z-index:1000;
+    z-index:2000;
 }
 label #btn{
     left: 0px;
@@ -465,7 +465,7 @@ form button .fas{
     }
 }
 .cart-page{
-    margin: 80px auto;
+    margin: 35px auto;
 }
 table{
     width: 100%;
