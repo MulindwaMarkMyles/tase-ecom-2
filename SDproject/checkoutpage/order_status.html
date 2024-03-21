@@ -26,4 +26,18 @@
             status: "Order Pending"
         };
 
-       
+        // Update the order status UI
+        var orderDetailsContainer = document.getElementById('order-details');
+        orderDetailsContainer.innerHTML = `
+            <h3>Products Purchased:</h3>
+            <ul>
+                ${orderDetails.products.map(product => `<li>${product}</li>`).join('')}
+            </ul>
+            <h3>Shipment Address:</h3>
+            <p>${orderDetails.address}</p>
+            <h3>Order Status:</h3>
+            <p>${orderDetails.status}</p>
+        `;
+    </script>
+</body>
+</html>
