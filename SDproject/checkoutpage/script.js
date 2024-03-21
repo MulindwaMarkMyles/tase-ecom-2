@@ -36,4 +36,9 @@ checkoutForm.addEventListener('submit', function(event) {
     // For demonstration, let's just log the data
     console.log("Name: " + name);
     console.log("Email: " + email);
-    
+    console.log("Address: " + address);
+    console.log("Payment Method: " + paymentMethod);
+
+    // Redirect to order status page
+    window.location.href = 'order_status.html';
+});
