@@ -20,7 +20,7 @@ body {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 input[type="text"],
@@ -63,19 +63,4 @@ body {
 
 h2 {
     margin-bottom: 20px;
-}
-
-#order-details {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 5px;
 }
