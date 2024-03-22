@@ -60,3 +60,31 @@
     opacity: 1;
     transition: all ease 0.5s;
   }
+  .disbut{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(20,20,20,0.7);
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    opacity: 0;
+    border: none;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    transition: all ease 0.5s;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.05), 1px 1px 1px rgba(0,0,0,0.05);
+  }
+
+  .roll:hover .disbut{
+    opacity: 1;
+    transition: all ease 0.5s;
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+  }
+  
+  
