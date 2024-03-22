@@ -126,4 +126,6 @@ html, body{
 .disbut:hover{
   background-color: rgba(200,20,20,0.6);
   transition: all ease 0.5s;
+  cursor: pointer
 }
+
