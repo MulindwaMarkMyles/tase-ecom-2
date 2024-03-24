@@ -19,3 +19,8 @@ h2 {
     margin-bottom: 20px;
 }
 
+#order-details {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
