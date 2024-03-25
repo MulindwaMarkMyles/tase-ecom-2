@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About ShopNet || ShopNet</title>
+
+  <title>sumit</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: #B3E5FC;">
+  {%if request.user.is_authenticated%}
+    {% include "customer/customer_navbar.html" %}
+  {%else%}
+    {% include "customer/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center;">“I don’t create companies for the sake of creating companies, but to get things done.” </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "customer/footer.html" %}
+</body>
+
+</html>
