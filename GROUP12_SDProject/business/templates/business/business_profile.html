@@ -53,20 +53,20 @@
 <div style="padding-left:300px;" class="container">
 
         <div class="col-sm-2 col-md-2">
-            <img src="{% static customer.profile_pic.url %}"   alt="profile pic" class="img-rounded img-responsive" />
+            <img src="{% static business.business_pic.url %}"   alt="profile pic" class="img-rounded img-responsive" />
         </div>
         <div class="col-sm-4 col-md-4">
             <blockquote>
-                <p>{{request.user}}</p> <small><cite title="Source Title">{{customer.address}}  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
+                <p>{{request.user}}</p> <small><cite title="Source Title">{{business.address}}  <i class="glyphicon glyphicon-map-marker"></i></cite></small>
             </blockquote>
-            <p> <i class="glyphicon glyphicon-phone"></i> {{customer.mobile}}
+            <p> <i class="glyphicon glyphicon-phone"></i> {{business.mobile}}
             </p>
         </div>
 
 </div>
 <br>
 <div style="text-align: center;">
-  <a href="/edit-profile"><button class="button" ><span>Edit Profile </span></button></a>
+  <a href="/edit-business-profile"><button class="button" ><span>Edit Profile </span></button></a>
 </div>
 <br><br><br><br><br><br>
 
