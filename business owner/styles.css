@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(new.png); /* Replace 'background.jpg' with the path to your photo */
+    background-size: cover;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.icon {
+    flex: 1;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.search {
+    flex: 2;
+    text-align: right;
+}
+
+.srch {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+span {
+    color: white;
+}
+
+.par {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.cn {
+    margin-top: 30px;
+}
+
+.form {
+    margin-top: 50px;
+}
+
+.form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btnn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:red;
+    color: white;
+    cursor: pointer;
+}
+
+.link {
+    margin-top: 10px;
+}
+
+.liw {
+    margin-top: 20px;
+}

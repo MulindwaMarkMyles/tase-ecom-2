@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Global Styles*/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -39,7 +39,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* Background Image */
+/* Background Image*/ 
 .background-image {
     position: fixed;
     top: 0;
