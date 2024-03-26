@@ -1,2 +1,2 @@
 # database files
-db.sqlite3
+*.sqlite3
