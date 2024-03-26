@@ -1,5 +1,19 @@
+<<<<<<< HEAD:SDproject/CustomerApp/views.py
+from django.shortcuts import render,redirect
+from django.views import View
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate,login,logout
+from .models import Customer
+#from .forms import UserRegistrationForm
+from django.contrib import messages
+from BusinessApp import models
+from . import models,forms
+from django.contrib.auth.decorators import login_required,user_passes_test
+=======
 from django.shortcuts import render,redirect,reverse
 from . import forms,models
+>>>>>>> 0f65e5cb491dd83391c8fef2a2ae3e0f31d7ba9d:GROUP12_SDProject/customer/views.py
 from django.http import HttpResponseRedirect,HttpResponse
 from django.core.mail import send_mail
 from django.contrib.auth.models import Group

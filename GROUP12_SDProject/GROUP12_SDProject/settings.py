@@ -39,9 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD:SDproject/SDproject/settings.py
+    'BusinessApp',
+    
+=======
     'customer',
     'business',
     'widget_tweaks',
+>>>>>>> 0f65e5cb491dd83391c8fef2a2ae3e0f31d7ba9d:GROUP12_SDProject/GROUP12_SDProject/settings.py
 ]
 
 MIDDLEWARE = [
