@@ -42,7 +42,7 @@
             <p>Return</p>
             <h1>&Orders</h1>
         </div>
-        <a href="" class="nav-cart">
+        <a href="{% url 'cart' %}" class="nav-cart">
             <img src="{% static 'assets/cart_icon.png' %}" width="35px" alt="">
             <h4>Cart</h4>
         </a>
@@ -57,23 +57,11 @@
 <div class="sidebar">
     <header>Category</header>
     <ul>
-        <li><a href="#"><i></i>Women's Clothes</a></li>
-        <li><a href="#"><i></i>Kids wear</a></li>
-        <li><a href="#"><i></i>Home Decor</a></li>
-        <li><a href="#"><i></i>Kitchen materials</a></li>
-        <li><a href="#"><i></i>Sports</a></li>
-        <li><a href="#"><i></i>Men Shoes</a></li>
-        <li><a href="#"><i></i>Women's Shoes</a></li>
-        <li><a href="#"><i></i>Electronics</a></li>
-        <li><a href="#"><i></i>Furniture</a></li>
-        <li><a href="#"><i></i>Accessories</a></li>
-        <li><a href="#"><i></i>Makeup</a></li>
-        <li><a href="#"><i></i>Others</a></li>
-        <li><a href="#" class="special"><i></i>Help & Settings</a></li>
-        <li><a href="#"><i></i>Your Account</a></li>
-        <li><a href="#"><i></i>Customer service</a></li>
-        <li><a href="#"><i></i>Sign in</a></li>
+    {% for category in categories %}
+        <li><a href="{% url 'category' category.title %}"><i></i>{{ category.title }}</a></li>
+    {% endfor %}
     </ul>
+
 
 </div>
 <section></section>
@@ -133,68 +121,16 @@
 </div>
 
 <div class="product-slider">
-    <h2>Best Sellers in Sports & Outdoors</h2>
+    <h2>New Arrivals</h2>
     <div class="products">
-       <div><img src="{% static 'assets/product1-1.jpg' %}" alt="">
-        <h2>name</h2>
+    {% for product in products %}
+       <div><img src="{{ product.product_image.url }}" alt="">
+        <h2>{{ product.name }}</h2>
         <div class="text">
-            <p>Shs.200,000</p>
+            <p>Shs.{{ product.price }}</p>
             <img src="{% static 'assets/cart_icon.png' %}">
         </div></div> 
-       <div><img src="{% static 'assets/product1-2.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.230,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-3.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.500,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-4.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.410,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-5.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.600,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-6.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.150,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-7.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.20,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-8.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.3,000,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-9.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.700,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
-       <div><img src="{% static 'assets/product1-10.jpg' %}" alt="">
-        <h2>name</h2>
-        <div class="text">
-            <p>Shs.109,000</p>
-            <img src="{% static 'assets/cart_icon.png' %}">
-        </div></div> 
+    {% endfor %}
     </div>
 </div>
 <div class="box-row">
@@ -326,73 +262,6 @@
         </div>
     </div>
 </div>
-<div class="product-slider">
-    <h2>Best Sellers in Gadgets</h2>
-    <div class="products">
-        <div><img src="{% static 'assets/product3-1.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.200,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-11.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.230,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-3.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.500,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-4.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.410,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-5.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.600,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-6.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.150,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-7.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.2,000,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-8.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.3,000,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-9.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.700,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        <div><img src="{% static 'assets/product3-10.jpg' %}" alt="">
-            <h2>name</h2>
-            <div class="text">
-                <p>Shs.109,000</p>
-                <img src="{% static 'assets/cart_icon.png' %}">
-            </div></div> 
-        
-    </div>
-</div>
-
 <div class="box-row">
     <div class="box-col">
         <h3>Food</h3>

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from .models import Customer
 from django.contrib import messages
-from business import models
+from business import models as businessmodels
 from . import models,forms
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponseRedirect,HttpResponse
@@ -20,8 +20,22 @@ from business.views import is_business
 def register_customer(request):
     return render(request, 'register.html')
 
+#category view
+def category(request, title):
+    category = businessmodels.Category.objects.filter(title=title).first()
+    categories = businessmodels.Category.objects.all()
+    products = models.Product.objects.filter(category=category)
+    if 'product_ids' in request.COOKIES:
+        product_ids = request.COOKIES['product_ids']
+        counter=product_ids.split('|')
+        product_count_in_cart=len(set(counter))
+    else:
+        product_count_in_cart=0
+    return render(request,'category.html',{'categories': categories, 'products':products,'product_count_in_cart':product_count_in_cart})
+
 def home_view(request):
-    products=models.Product.objects.all()
+    products=businessmodels.Product.objects.all()
+    categories = businessmodels.Category.objects.all()
     if 'product_ids' in request.COOKIES:
         product_ids = request.COOKIES['product_ids']
         counter=product_ids.split('|')
@@ -32,7 +46,7 @@ def home_view(request):
         return HttpResponseRedirect('afterlogin')
 
     #i also changed the template here to index.html
-    return render(request,'index.html',{'products':products,'product_count_in_cart':product_count_in_cart})
+    return render(request,'index.html',{'categories': categories, 'products':products,'product_count_in_cart':product_count_in_cart})
 
 def afterlogin_view(request):
     if is_customer(request.user):

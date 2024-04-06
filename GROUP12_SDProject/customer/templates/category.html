@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNet</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://kit.fontawesome.com/041ce3762b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img src="{% static 'assets/logo.jfif' %}" width="60" alt="">
+        </a>
+        <div class="nav-country">
+            <img src="{% static 'assets/location_icon.png' %}" height="20" alt="">
+            <div>
+                <p>Deliver to</p>
+                <h1>Uganda</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-gategory">
+                <p>All</p>
+                <img src="{% static 'assets/dropdown_icon.png' %}" height="12" alt="">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Search Shopnet">
+            <img src="{% static 'assets/search_icon.png' %}" class="nav-search-icon" alt="">
+        </div>
+        <div class="nav-language">
+            <img src="{% static 'assets/us_flag.png' %}" width="25px" alt="">
+            <p>EN</p>
+            <img src="{% static 'assets/dropdown_icon.png' %}" width="8px" alt="">
+        </div>
+        <div class="nav-text">
+            <p>Hello, Sign in</p>
+            <h1>Account & Lists <img src="{% static 'assets/dropdown_icon.png' %}" width="8px" alt=""></h1>
+        </div>
+        <div class="nav-text">
+            <p>Return</p>
+            <h1>&Orders</h1>
+        </div>
+        <a href="{% url 'cart' %}" class="nav-cart">
+            <img src="{% static 'assets/cart_icon.png' %}" width="35px" alt="">
+            <h4>Cart</h4>
+        </a>
+
+    </nav>
+
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+<div class="sidebar">
+    <header>Category</header>
+    <ul>
+    {% for category in categories %}
+        <li><a href="{% url 'category' category.title %}"><i></i>{{ category.title }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+
+<div class="product-slider">
+    <h2>These matched the query..</h2>
+    <div class="products-c">
+    {% for product in products %}
+       <div><img src="{{ product.product_image.url }}" alt="">
+        <h2>{{ product.name }}</h2>
+        <div class="text">
+            <p>Shs.{{ product.price }}</p>
+            <img src="{% static 'assets/cart_icon.png' %}">
+        </div></div>
+    {% endfor %}
+    </div>
+</div>
+
+<div class="box-row">
+    <div class="box-col">
+        <h3>Food</h3>
+        <img src="{% static 'assets/box4-1.jpg' %}" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Home Decor</h3>
+        <img src="{% static 'assets/box4-2.jpg' %}" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Skincare</h3>
+        <img src="{% static 'assets/box4-3.jpg' %}" alt="">
+        <a href="/">Shop More</a>
+    </div>
+    <div class="box-col">
+        <h3>Tech Products</h3>
+        <img src="{% static 'assets/box4-4.jpg' %}" alt="">
+        <a href="/">Shop More</a>
+    </div>
+</div>
+
+<footer>
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'assets/logo.jfif' %}" class="logo"  width="100" alt="">
+            <p>2020-2024, ShopNet.com, Inc. or its affiliates shop for
+                quality nice products and we deliver at your door step</p>
+        </div>
+        <div class="col">
+            <h3>Office <div class="underline"><span></span></div></h3>
+            <p>ITPL Road</p>
+            <p>Whitefield, Bangalore</p>
+            <p>Kampala, Pin 12345, Uganda</p>
+            <p class="email-id">ShopNet@outlook.com</p>
+            <h4>+85345790124</h4>
+        </div>
+        <div class="col">
+            <h3>Links <div class="underline"><span></span></div></h3></h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter <div class="underline"><span></span></div></h3></h3>
+            <form>
+                <i class="fa-solid fa-user"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <p class="copyright">ShopNet 2023 - All Right Reserved</p>
+</footer>
+<script src="{% static 'css/script.js' %}"></script>
+</body>
+</html>
+
+
+
