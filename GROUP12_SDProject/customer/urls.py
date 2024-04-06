@@ -1,12 +1,8 @@
-"""
-
-
-
-"""
 
 from django.urls import path
 from .views import *
 from django.contrib.auth.views import LoginView,LogoutView
+
 urlpatterns = [
     path('',home_view,name=''),
     path('afterlogin/', afterlogin_view,name='afterlogin'),
@@ -15,6 +11,7 @@ urlpatterns = [
     path('contactus/', contactus_view,name='contactus'),
     path('search/', search_view,name='search'),
     path('send-feedback/', send_feedback_view,name='send-feedback'),
+    path('register-c/', register_customer, name='register_customer'),
     path('customersignup/', customer_signup_view),
     path('customerlogin/', LoginView.as_view(template_name='customer/customerlogin.html'),name='customerlogin'),
     path('customersignup/customerlogin/', LoginView.as_view(template_name='customer/customerlogin.html'),name='customerlogin'),

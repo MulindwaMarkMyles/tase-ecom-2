@@ -19,6 +19,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('customer.urls')),
+    path('customer/', include('customer.urls')),# i changed this so as to differenciate the two apps business and customers
     path('', include('business.urls')),
 ]

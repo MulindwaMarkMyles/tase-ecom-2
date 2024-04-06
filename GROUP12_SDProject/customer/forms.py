@@ -1,12 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
-<<<<<<< HEAD:SDproject/CustomerApp/forms.py
 from django.contrib.auth.forms import UserCreationForm
 from . import models
-=======
-from . import models
 
->>>>>>> 0f65e5cb491dd83391c8fef2a2ae3e0f31d7ba9d:GROUP12_SDProject/customer/forms.py
 
 class CustomerUserForm(forms.ModelForm):
     class Meta:
